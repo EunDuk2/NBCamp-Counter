@@ -39,11 +39,17 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="➖"/>
+                                                <connections>
+                                                    <action selector="didTapDecrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Chq-4b-jD9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gw-hj-xtY">
                                                 <rect key="frame" x="84.999999999999986" y="0.0" width="75.000000000000014" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="➕"/>
+                                                <connections>
+                                                    <action selector="didTapIncrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0d-uE-8aY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -54,6 +60,9 @@
                                         <rect key="frame" x="0.0" y="44.333333333333258" width="160" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Reset"/>
+                                        <connections>
+                                            <action selector="didTapResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHp-av-MfM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -67,6 +76,9 @@
                             <constraint firstItem="bGA-sz-iXD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MnK-e3-fdS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelResult" destination="bGA-sz-iXD" id="WTw-7G-ARX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
