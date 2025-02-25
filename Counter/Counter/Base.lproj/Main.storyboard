@@ -77,6 +77,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonDecrement" destination="eUe-A7-Bjj" id="kC5-AS-LyT"/>
+                        <outlet property="buttonIncrement" destination="7gw-hj-xtY" id="HFf-fU-meB"/>
                         <outlet property="labelResult" destination="bGA-sz-iXD" id="WTw-7G-ARX"/>
                     </connections>
                 </viewController>
