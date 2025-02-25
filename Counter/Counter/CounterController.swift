@@ -17,23 +17,19 @@ class CounterController {
     var currentCount: Int {
         return counter.count
     }
-    var isMaxValueReached: Bool {
-        return counter.maxValueReached()
+    var isAtMax: Bool {
+        return counter.isAtMax
     }
-    var isMinValueReached: Bool {
-        return counter.minValueReached()
+    var isAtMin: Bool {
+        return counter.isAtMin
     }
     
     func incrementAction() {
-        if !isMaxValueReached {
-            counter.incrementCount()
-        }
+        counter.incrementCount()
     }
     
     func decrementAction() {
-        if !isMinValueReached {
-            counter.decrementCount()
-        }
+        counter.decrementCount()
     }
     
     func resetAction() {

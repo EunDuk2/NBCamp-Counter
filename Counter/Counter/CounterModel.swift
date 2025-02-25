@@ -13,19 +13,23 @@ struct CounterModel {
     private(set) var maxLimit: Int = 10
     
     mutating func incrementCount() {
-        count += 1
+        if count < maxLimit {
+            count += 1
+        }
     }
     mutating func decrementCount() {
-        count -= 1
+        if count > minLimit {
+            count -= 1
+        }
     }
     mutating func resetCount() {
         count = 0
     }
     
-    func maxValueReached() -> Bool {
+    var isAtMax: Bool {
         return count >= maxLimit
     }
-    func minValueReached() -> Bool {
+    var isAtMin: Bool {
         return count <= minLimit
     }
 }

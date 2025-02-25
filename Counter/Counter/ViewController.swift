@@ -24,30 +24,18 @@ class ViewController: UIViewController {
     func updateUI() {
         labelResult.text = String(counterController.currentCount)
         
+        buttonIncrement.isEnabled = !counterController.isAtMax
+        buttonDecrement.isEnabled = !counterController.isAtMin
     }
     
     @IBAction func didTapIncrementButton(_ sender: Any) {
         counterController.incrementAction()
         updateUI()
-        
-        if counterController.isMaxValueReached {
-            buttonIncrement.isEnabled = false
-        }
-        if !counterController.isMinValueReached {
-            buttonDecrement.isEnabled = true
-        }
     }
     
     @IBAction func didTapDecrementButton(_ sender: Any) {
         counterController.decrementAction()
         updateUI()
-        
-        if !counterController.isMaxValueReached {
-            buttonIncrement.isEnabled = true
-        }
-        if counterController.isMinValueReached {
-            buttonDecrement.isEnabled = false
-        }
     }
     
     @IBAction func didTapResetButton(_ sender: Any) {
